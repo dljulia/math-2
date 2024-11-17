@@ -1,0 +1,311 @@
+:root {
+  --primary-color: #257985;
+}
+
+* {
+  touch-action: manipulation;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--primary-color);
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  padding: 13px 11px;
+}
+
+.main {
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 20px 0;
+}
+
+.launch, .game {
+  position: relative;
+  max-width: 260px;
+  height: calc(100vh - 75px);
+  margin: 0 auto;
+}
+
+/* Главная */
+h1 {
+  color: var(--primary-color);
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.modes {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, 75px);
+  column-gap: 17px;
+  margin-bottom: 20px;
+}
+
+.modes-example {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(2, 120px);
+  column-gap: 17px;
+}
+
+.mode, .mode-example {
+  background-color: #bfbdbd;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, .25);
+  border-radius: 20px;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 8px 0;
+}
+
+.mode-example { 
+  align-self: center;
+}
+
+.mode-example sup {
+  font-size: 12px;
+}
+
+.active {
+  background-color: var(--primary-color);
+}
+
+/* Результаты */
+.results {
+  color: var(--primary-color);
+  font-weight: 700;
+  text-align: left;
+}
+
+h2 {
+  font-size: 24px;
+  margin: 40px 0 20px;
+}
+
+.data p {
+  font-size: 20px;
+}
+
+.data {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 8px;
+}
+
+/* Старт */
+.start {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 190px;
+  height: 40px;
+  background-color: var(--primary-color);
+  border-style: none;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 40px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+}
+
+/* Строка с результатами процесса игры */
+.header {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+}
+
+.arrow-back {
+  border: none;
+  background-color: transparent;
+  justify-self: left;
+  color: var(--primary-color);
+  font-size: 30px;
+}
+
+.score {
+  display: inline-block;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.mistakes {
+  color: #E05858;
+}
+
+.correct {
+  color: #418B69;
+  margin-right: 5px;
+}
+
+.timer {
+  justify-self: right;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* Основное поле */
+.game-field {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 220px;
+}
+
+/* Пример */
+.example {
+  text-align: left;
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+.answer {
+  display: inline-block;
+  width: 130px;
+  font-size: 40px;
+  border-style: none;
+}
+
+.answer:focus {
+  outline: none;
+}
+
+.sup-number, .sup-answer {
+  font-size: 24px;
+}
+
+.error {
+  text-decoration: line-through;
+  text-decoration-color: #E05858;
+}
+
+.right-answer {
+  display: block;
+  font-size: 40px;
+  color: #E05858;
+  text-align: right;
+}
+
+/* Клавиатура */
+.buttons {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, 60px);
+  grid-template-rows: repeat(4, 60px);
+  gap: 20px;
+}
+
+.number-button, .cancel, .next {
+  background-color: #E1E1E1;
+  border-radius: 50%;
+  border: none;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+  color: #000;
+  font-size: 32px;
+  line-height: 60px;
+}
+
+.cancel, .next {
+  background-color: var(--primary-color);
+  color: #fff;
+  font-size: 24px;
+}
+
+/* Спрятать блок */
+.hidden {
+  display: none;
+}
+
+@media screen and (min-width: 375px) {
+  /* Главная */
+  .active {
+    background-color: var(--primary-color);
+  }
+  
+  /* Результаты */
+  h2 {
+    font-size: 28px;
+  }
+  
+  .data p {
+    font-size: 24px;
+  }
+  
+  .data {
+    row-gap: 10px;
+  }
+  
+  /* Старт */
+  .start {
+    width: 230px;
+    height: 50px;
+    border-radius: 25px;
+    font-size: 24px;
+    line-height: 50px;
+  }
+  
+  /* Строка с результатами процесса игры */  
+  .arrow-back {
+    font-size: 40px;
+  }
+  
+  .score {
+    font-size: 32px;
+  }
+  
+  .correct {
+    margin-right: 10px;
+  }
+  
+  .timer {
+    font-size: 20px;
+  }
+  
+  /* Основное поле */
+  .game-field {
+    max-width: 250px;
+  }
+  
+  /* Пример */
+  .example {
+    font-size: 44px;
+  }
+  
+  .answer {
+    font-size: 44px;
+  }
+  
+  .sup-number, .sup-answer {
+    font-size: 26px;
+  }
+  
+  .right-answer {
+    font-size: 44px;
+  }
+  
+  /* Клавиатура */
+  .buttons {
+    grid-template-columns: repeat(3, 70px);
+    grid-template-rows: repeat(4, 70px);
+    gap: 20px;
+  }
+  
+  .number-button, .cancel, .next {
+    font-size: 36px;
+    line-height: 70px;
+  }
+  
+  .cancel, .next {
+    font-size: 26px;
+  }
+}
+
+

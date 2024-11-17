@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/681796284a.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css" />
+  <title>Таблица квадратов</title>
+</head>
+<body>
+  <div class="main">
+    <div class="launch">
+      <h1>Выберите режим</h1>
+      <div class="modes">
+        <button class="first-mode mode active">11-20</button>
+        <button class="second-mode mode">21-32</button>
+        <button class="third-mode mode">11-32</button>
+      </div>
+      
+      <h1>Пример</h1>
+      <div class="modes-example">
+        <button class="first-example mode-example active">11<sup>2</sup> = x</button>
+        <button class="second-example mode-example">121 = xx<sup>2</sup></button>
+      </div>
+
+      <div class="results hidden">
+        <h2>Результат</h2>
+        <div class="data">
+          <p class="time-text"></p>
+          <p class="correct-text"></p>
+          <p class="mistake-text"></p>
+        </div>
+      </div>
+      <button class="start">Старт</button>
+    </div>
+
+    <div class="game hidden">
+      
+      <div class="header">
+        <button class="arrow-back"><i class="fa-solid fa-arrow-left-long"></i></button>
+        <div class="score">
+          <span class="correct">0</span>
+          <span class="mistakes">0</span>
+        </div>
+        <span id="timer" class="timer">00:00</span>
+      </div>
+
+      <div class="game-field">
+        <div class="example">
+          <span class="right-answer"></span>
+          <p><span class="number"></span><sup class="sup-number">2</sup> = <input class="answer" readonly><sup class="sup-answer hidden">2</sup></p>
+        </div>
+    
+        <div class="buttons">
+          <button class="number-button">1</button>
+          <button class="number-button">2</button>
+          <button class="number-button">3</button>
+          <button class="number-button">4</button>
+          <button class="number-button">5</button>
+          <button class="number-button">6</button>
+          <button class="number-button">7</button>
+          <button class="number-button">8</button>
+          <button class="number-button">9</button>
+          <button class="cancel"><i class="fa-solid fa-xmark"></i></button>
+          <button class="number-button">0</button>
+          <button class="next"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
